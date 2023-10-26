@@ -1,0 +1,30 @@
+[
+	{
+	  "title": "мясопереработка",
+	  "image": "/images/directions/direction-1.png"
+	},
+	{
+	  "title": "рыбопереработка",
+	  "image": "/images/directions/direction-2.png"
+	},
+	{
+	  "title": "производство полуфабрикатов",
+	  "image": "/images/directions/direction-3.png"
+	},
+	{
+	  "title": "птицепереработка",
+	  "image": "/images/directions/direction-4.png"
+	},
+	{
+	  "title": "гастрономия",
+	  "image": "/images/directions/direction-5.png"
+	},
+	{
+	  "title": "кулинария",
+	  "image": "/images/directions/direction-6.png"
+	},
+	{
+	  "title": "молочная промышленность",
+	  "image": "/images/directions/direction-7.png"
+	}
+]

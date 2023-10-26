@@ -1,0 +1,51 @@
+@value container as MainMenu from "~components/MainMenu/MainMenu.module.scss";
+
+.container {
+	position: fixed;
+	margin: 0;
+	top: 94px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+
+	& :global {
+		animation: fadeIn 0.5s ease forwards;
+	}
+
+	@media #{$medium-up} {
+		display: none;
+	}
+}
+
+.body {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	background: $cPrimary;
+	padding: 30px $gutter 50px;
+
+	:global(.MainMenu) {
+		text-align: center;
+
+		ul {
+			li {
+				&:not(:last-child) {
+					margin-bottom: 25px;
+				}
+
+				a {
+					font-size: 20px;
+					font-weight: 700;
+					color: #fff;
+					text-decoration: none;
+
+					&:global(.isActive) {
+						color: $cOrange;
+					}
+				}
+			}
+		}
+	}
+}

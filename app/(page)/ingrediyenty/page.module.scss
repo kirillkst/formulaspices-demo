@@ -1,0 +1,84 @@
+@value form as Form from "~components/ui/Form/Form.module.scss";
+@value term as FormTerm from "~components/ui/Form/Form.module.scss";
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+
+	@media #{$small-down} {
+		grid-template-columns: 1fr;
+		gap: $gutter;
+	}
+
+	> li {
+		&:nth-child(5) {
+			@media #{$medium-up} {
+				grid-column: 2/4;
+			}
+		}
+
+		&:nth-child(9) {
+			@media #{$medium-up} {
+				grid-column: 1/3;
+			}
+		}
+	}
+}
+
+.callback {
+	margin-top: 50px;
+
+	@media #{$medium-up} {
+		font-size: 20px;
+	}
+
+	> p {
+		font-weight: 500;
+
+		@media #{$medium-up} {
+			padding-left: 30px;
+		}
+	}
+
+	:global {
+		.Form {
+			display: flex;
+			flex-direction: column;
+			gap: $gutter;
+
+			.FormTerm {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        text-align: center;
+			}
+
+			@media #{$medium-up} {
+				gap: 0;
+				flex-direction: row;
+
+				> * {
+					&:not(button) {
+						flex: 1 0 auto;
+					}
+
+					+ * {
+						position: relative;
+						margin-left: -50px;
+						z-index: 110;
+					}
+				}
+
+				input {
+					padding-right: 50px;
+				}
+
+				button {
+					flex-shrink: 1;
+				}
+			}
+		}
+	}
+}

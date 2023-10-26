@@ -1,0 +1,21 @@
+%reset-button {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: transparent;
+	color: inherit;
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+	-webkit-appearance: none;
+
+	&:focus:not(:focus-visible) {
+		outline: none;
+	}
+
+	:focus:not(:-moz-focusring) {
+		outline: none;
+	}
+}

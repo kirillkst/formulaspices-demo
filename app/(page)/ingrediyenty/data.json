@@ -1,0 +1,42 @@
+[
+	{
+	  "title": "функциональные\n смеси",
+	  "image": "/images/ingredients/ingredient-1.png"
+	},
+	{
+	  "title": "оболочки",
+	  "image": "/images/ingredients/ingredient-2.png"
+	},
+	{
+	  "title": "красители",
+	  "image": "/images/ingredients/ingredient-3.png"
+	},
+	{
+	  "title": "пищевые\n волокна",
+	  "image": "/images/ingredients/ingredient-4.png"
+	},
+	{
+	  "title": "смеси для увеличения\n сроков годности",
+	  "image": "/images/ingredients/ingredient-5.png"
+	},
+	{
+	  "title": "фосфаты",
+	  "image": "/images/ingredients/ingredient-6.png"
+	},
+	{
+	  "title": "эмульгаторы",
+	  "image": "/images/ingredients/ingredient-7.png"
+	},
+	{
+	  "title": "смеси для\n инъецирования",
+	  "image": "/images/ingredients/ingredient-8.png"
+	},
+	{
+	  "title": "ингредиенты\n для вкуса и аромата",
+	  "image": "/images/ingredients/ingredient-9.png"
+	},
+	{
+	  "title": "белковые\n продукты",
+	  "image": "/images/ingredients/ingredient-10.png"
+	}
+]

@@ -1,0 +1,35 @@
+{
+  "name": "formulaspices2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browserslist": [
+    "last 10 versions",
+    "> 5%"
+  ],
+  "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.5",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@types/nodemailer": "^6.4.11",
+    "classnames": "^2.3.2",
+    "next": "13.5.2",
+    "nodemailer": "^6.9.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
+    "sharp": "^0.32.6",
+    "zustand": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.10",
+    "sass": "^1.69.0",
+    "typescript": "^5.2.2"
+  }
+}

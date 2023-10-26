@@ -1,0 +1,50 @@
+@value btn as Btn from "~components/ui/Button/Button.module.scss";
+
+.container {
+	position: relative;
+	padding: 220px 0 140px;
+	z-index: 110;
+	color: #fff;
+
+	@media #{$large-down} {
+		padding: 140px 0;
+	}
+
+	@media #{$small-down} {
+		padding: 70px 0;
+	}
+
+	h1 {
+		margin-bottom: 15px;
+
+		@media #{$medium-up} {
+			font-size: 54px;
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: calc(50% - 50vw);
+		right: calc(50% - 50vw);
+		background-image: url('/images/front-hero-bg.png');
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+
+	:global(.Btn) {
+		font-weight: 700;
+		margin-top: 31px;
+		background: $cOrange2;
+
+		@media #{$medium-up} {
+			font-size: 40px;
+			height: 96px;
+			border-radius: 40px;
+			padding: 0 38px;
+		}
+	}
+}

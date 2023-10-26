@@ -1,0 +1,87 @@
+.overlay {
+	position: fixed;
+	inset: 0px;
+	z-index: 50;
+	background-color: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(2px);
+	z-index: 990;
+
+	& :global {
+		animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	}
+}
+
+.content {
+	position: fixed;
+	width: 100%;
+	max-height: 85vh;
+	background: #fff;
+	padding: 50px 30px;
+	box-shadow: rgba(14, 18, 22, 0.35) 0px 10px 38px -10px, rgba(14, 18, 22, 0.2) 0px 10px 20px -15px;
+	z-index: 995;
+
+	@media #{$medium-up} {
+		@include center();
+		max-width: 600px;
+	}
+	@media #{$small-down} {
+		inset: 0;
+		min-height: 100vh;
+		max-width: none;
+
+		@supports (min-height: 100svh) {
+			min-height: 100svh;
+		}
+	}
+
+	& :global {
+		@media #{$medium-up} {
+			animation: fadeMoveIn 0.5s ease forwards;
+		}
+
+		@media #{$small-down} {
+			animation: moveUp 0.5s ease forwards;
+		}
+	}
+}
+
+.close {
+	@extend %reset-button;
+	position: absolute;
+	top: 32px;
+	right: 32px;
+	font-size: 0;
+	z-index: 150;
+
+	@media #{$small-down} {
+		display: block;
+		top: 0;
+		right: 0;
+		@include square(44px);
+	}
+
+	svg {
+		fill: $cPrimary;
+		transition: transform 0.23s ease;
+	}
+
+	&:hover {
+		svg {
+			fill: $cOrange;
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.header {
+	margin-bottom: 30px;
+}
+
+.title {
+	font-weight: 700;
+}
+
+.description {
+	font-size: 16px;
+	margin-top: 15px;
+}

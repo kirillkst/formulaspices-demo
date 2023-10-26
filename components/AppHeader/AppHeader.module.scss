@@ -1,0 +1,73 @@
+@value container as MainMenu from "~components/MainMenu/MainMenu.module.scss";
+@value container as Logo from "~components/Logo/Logo.module.scss";
+
+.container {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	font-size: 0;
+	background: $cPrimary;
+	z-index: 150;
+}
+
+.body {
+	display: flex;
+	align-items: center;
+	height: 94px;
+
+	@media #{$small-down} {
+		justify-content: space-between;
+	}
+
+	:global(.Logo) {
+		img {
+			filter: invert(77%) sepia(66%) saturate(488%) hue-rotate(340deg) brightness(94%) contrast(95%);
+		}
+	}
+
+	:global(.MainMenu) {
+		margin-left: 63px;
+
+		@media #{$medium-down} {
+			margin-left: 30px;
+		}
+
+		@media #{$small-down} {
+			display: none;
+		}
+
+		ul {
+			display: flex;
+			gap: 44px;
+
+			@media #{$medium-down} {
+				gap: 20px;
+			}
+
+			li {
+				a {
+					font-size: $fsDefault;
+					color: #fff;
+					text-decoration: none;
+
+					&:global(.isActive) {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}
+
+.mobileMenu {
+	@extend %reset-button;
+	@include square(50px);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	@media #{$medium-up} {
+		display: none;
+	}
+}

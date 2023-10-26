@@ -1,0 +1,30 @@
+.container {
+  padding: 75px 0 90px;
+
+  @media #{$small-down} {
+    padding: 50px 0 70px;
+	}
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: $gutter;
+  align-items: center;
+  margin-bottom: 44px;
+
+  @media #{$small-down} {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+.back {
+  color: $cPrimary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

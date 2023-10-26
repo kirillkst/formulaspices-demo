@@ -1,0 +1,29 @@
+.directions {
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	gap: 24px;
+	margin: 60px 0 80px;
+
+	@media #{$small-down} {
+		grid-template-columns: 1fr;
+		gap: $gutter;
+	}
+
+	> li {
+		@media #{$medium-up} {
+			grid-column: span 3;
+
+			&:nth-child(1) {
+				grid-column: span 5;
+			}
+
+			&:nth-child(2) {
+				grid-column: span 4;
+			}
+
+			&:nth-child(3) {
+				grid-column: span 6;
+			}
+		}
+	}
+}

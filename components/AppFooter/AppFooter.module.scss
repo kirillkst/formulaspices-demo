@@ -1,0 +1,90 @@
+@value container as MainMenu from "~components/MainMenu/MainMenu.module.scss";
+@value container as Logo from "~components/Logo/Logo.module.scss";
+
+.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 50px 0;
+  font-size: 0;
+  background: $cPrimary;
+  color: #fff;
+  z-index: 50;
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+
+  @media #{$medium-down} {
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  @media #{$small-down} {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  :global(.Logo) {
+    @media #{$medium-only} {
+      display: none;
+    }
+
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  :global(.MainMenu) {
+    @media #{$small-down} {
+      display: none;
+    }
+
+    ul {
+      li {
+        a {
+          font-size: 18px;
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.address {
+  font-size: 18px;
+
+  @media #{$small-down} {
+    font-size: 16px;
+  }
+}
+
+.meta {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+  font-size: 12px;
+}
+
+.callback {
+  @extend %reset-button;
+  font-size: 18px;
+  text-decoration: underline;
+
+  @media #{$small-down} {
+    font-size: 16px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

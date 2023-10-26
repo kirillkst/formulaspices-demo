@@ -1,0 +1,50 @@
+.form {
+  position: relative;
+}
+
+.field {
+  position: relative;
+	@include placeholder(#d8d8d8, transparent);
+}
+
+.input {
+	position: relative;
+	display: block;
+	font-size: $fsDefault;
+	color: #000;
+	background: #f4f4f4;
+	width: 100%;
+	height: 60px;
+	padding: 0 30px;
+	border: 1px solid #d8d8d8;
+	border-radius: 30px;
+	outline: 0;
+	z-index: 110;
+
+	&:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0 50px #d8d8d8 inset;
+	}
+}
+
+.text {
+	input,
+	textarea {
+		-webkit-appearance: none;
+	}
+}
+
+.errorMessage {
+	position: absolute;
+	top: 100%;
+	color: red;
+	font-size: 12px;
+	display: block;
+}
+
+.errorInput {
+	border-color: red;
+}
+
+.term {
+	font-size: 12px;
+}

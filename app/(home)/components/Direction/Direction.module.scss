@@ -1,0 +1,43 @@
+.container {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	padding: 24px;
+	height: 195px;
+	z-index: 110;
+
+	@media #{$medium-down} {
+		padding: $gutter;
+	}
+
+	@media #{$small-down} {
+		height: 160px;
+	}
+
+	img {
+		z-index: -1;
+	}
+}
+
+.title {
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #fff;
+	text-decoration: none;
+
+	&:after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 115;
+	}
+
+	&:hover {
+		color: #fff;
+	}
+
+	@media #{$medium-down} {
+		font-size: 20px;
+	}
+}
